@@ -1,0 +1,379 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+main, article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {max-width: 100%;}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: separate; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:after { content: " "; display: block; clear: both; }
+
+/*Reset Style Complete*/
+
+
+
+body{
+font-family: 'Roboto', sans-serif;
+flex-basis: 950px;
+}
+
+.container{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+/* Header Start */
+
+.header{
+	padding-top: 90px;
+	background-image: url(..img/burger.png);
+	background-size: cover;
+
+}
+
+.header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center; 
+	border-bottom: 1px solid #8795a9;
+	padding-bottom: 40px;
+}
+
+ul.navigation-menu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 25px;
+
+
+}
+
+ul.navigation-menu li a{
+	text-decoration: none;
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.hotline a{
+	text-decoration: none;
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+/* Header End */
+
+/* Main Banner Start */
+
+.main-banner{
+	padding: 180px 0 440px;
+	background-color: #b2b2b2;
+}
+
+.main-banner .container{
+	display: flex;
+	gap: 100%;
+    justify-content: center;
+}
+
+.main-banner-text{
+	text-align: center;
+}
+
+.main-banner-text h1{
+	font-family: 'Roboto', sans-serif;
+	line-height: 37px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 72px;
+	margin: 24px;
+	padding: 32px;
+}
+
+.main-banner-text p{
+	font-size: 20px;
+	color: #ffffff;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 27px;
+}
+
+.main-banner a.main-banner-button{
+	text-decoration: none;
+	border: 3px solid #fbad27;
+	padding: 18px 56px;
+	border-radius: 50px;
+	outline: 0;
+	display: inline-block;
+	font-weight: ;
+	font-size: 16px;
+	font-weight: 700;
+	background-color: #fbad27;
+	color: #ffffff;
+}
+
+/* Main Banner End */
+
+/* Welcome Fusion Start */
+
+.fusion{
+background-color: #ffffff;
+}
+
+.fusion .container{
+	border-bottom: 1px solid #ededed;			
+}
+
+.welcome-fusion{
+	width: 940px;
+	margin: 0 auto;
+	padding-top: 152px;
+	padding-bottom: 190px;
+	text-align: center;
+}
+
+.welcome-fusion h2{
+	font-weight: 400;
+	font-size: 50px;
+	color: #4a4a4a;
+	margin: 0 0 30px 0;
+} 
+
+.welcome-fusion p{
+	color: #757575;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.fusion-banner-img{
+	display: flex;
+	gap: 25px;
+	margin-bottom: 210px;
+}
+
+.fusion-banner img{
+	margin-bottom: 25px;
+}
+
+.fusion-banner h3{
+	font-size: 16px;
+    margin: 0 0 30px 0;
+    font-weight: bold;
+}
+
+.fusion-banner p{
+		font-size: 16px;
+}
+
+.fusion-banner{
+	padding: 55px;
+}
+
+.fusion-banner.fusion-center{
+	box-shadow: 0 0 47px 3px rgba(251, 173, 39, 0.05), 0 0 47px 3px rgba(0, 0, 0, 0.01);
+}
+
+/* Welcome Fusion End */
+
+/* Destination Start */
+
+.destination{
+	padding-top: 151px;
+}
+
+.destination .container{
+	width: 1280px;
+}
+
+.destination-country{
+	text-align: center;
+	margin-bottom: 180px;
+}
+
+.destination-country h4{
+	font-size: 50px;
+	font-weight: 400;
+	color: #4a4a4a;
+	margin-bottom: 28px;
+}
+
+.destination-country p{
+	font-size: 20px;
+	font-weight: 400;
+	color: #6f6f6f;
+}
+
+.country{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -22px;
+    margin-right: -22px;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 85px;
+}
+
+.country-image{
+	position: relative;
+	flex-basis: 33.33%;
+}
+
+.country-image h5{
+	position: absolute;
+    top: 100px;
+    text-align: center;
+    left: 0;
+    color: #FFF;
+    right: 0;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.country-image img{
+	width: 100%;
+	vertical-align: middle;
+}
+
+.country-image-wrap{
+	padding: 22px;
+}
+
+
+
+/* Destination End */
+
